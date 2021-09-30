@@ -10,7 +10,7 @@ source:
   sha256: b89eb00979614e3584bb4e8431172b2345d00b983a04ebf00a401fb695f4e6d3
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -18,7 +18,9 @@ requirements:
     - pip
     - python
     - setuptools
-    - zc.buildout >=2.12.0
+    # - zc.buildout >=2.12.0
+    # remove line below and uncomment line above after zc.buildout can be built with setuptools>52
+    - zc.buildout 2.13.3
   run:
     - python
     - setuptools
