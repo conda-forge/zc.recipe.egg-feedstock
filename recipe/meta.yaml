@@ -1,16 +1,16 @@
 {% set name = "zc.recipe.egg" %}
-{% set version = "2.0.7" %}
+{% set version = "4.0.0" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b89eb00979614e3584bb4e8431172b2345d00b983a04ebf00a401fb695f4e6d3
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zc_recipe_egg-{{ version }}.tar.gz"
+  sha256: e371f70b0e801f5a712f5592dcaae0af77c6897c01c3210591e164d9c7c8642c
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
